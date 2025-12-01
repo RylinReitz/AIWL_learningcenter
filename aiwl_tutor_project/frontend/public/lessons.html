@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lessons - AIWL</title>
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body>
+  <h1>Lessons</h1>
+  <div id="lessons"></div>
+
+  <script>
+    async function loadLessons(){
+      const res = await fetch('/api/lessons/');
+      const lessons = await res.json();
+      const container = document.getElementById('lessons');
+      container.innerHTML = lessons.map(l => `<article><h3>${l.title}</h3><p>${l.content}</p></article>`).join('');
+    }
+    loadLessons().catch(console.error);
+  </script>
+</body>
+</html>

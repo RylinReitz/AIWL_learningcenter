@@ -1,0 +1,9 @@
+{
+  "name": "aiwl-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "serve public -l 8080"
+  },
+  "dependencies": {}
+}
