@@ -1,6 +1,0 @@
-// Placeholder Tailwind config; if you use Tailwind, initialize properly.
-module.exports = {
-  content: ['./public/**/*.html', './src/**/*.{js,jsx,ts,tsx}'],
-  theme: { extend: {} },
-  plugins: [],
-}
